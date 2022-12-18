@@ -27,7 +27,7 @@ Vue.createApp({
             this.rotateZ = 0
         },
         async copy() {
-            let text = `transform:${this.transform};`
+            let text = `transform:${this.rotation.transform};`
             await navigator.clipboard.writeText(text)
             // TODO: Add a good notification
         }
