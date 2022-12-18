@@ -25,6 +25,11 @@ Vue.createApp({
             this.rotateX = 0
             this.rotateY = 0
             this.rotateZ = 0
+        },
+        async copy() {
+            let text = `transform:${this.transform};`
+            await navigator.clipboard.writeText(text)
+            // TODO: Add a good notification
         }
     }
 }).mount("#app")
