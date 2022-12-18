@@ -12,17 +12,17 @@
     <main>
       <section class="settings">
         <div class="settings-container">
-          <label>perspective: {{ perspective }} px;</label>
-          <input type="range" min="0" max="999" v-model="perspective" />
+          <label>perspective: {{ perspective }} px;
+          <input type="range" min="0" max="999" v-model="perspective" /> </label>
 
-          <label>rotateX: {{ rotateX }} deg; </label>
-          <input type="range" min="-180" max="180" v-model="rotateX" />
+          <label>rotateX: {{ rotateX }} deg;
+          <input type="range" min="-180" max="180" v-model="rotateX" /> </label>
 
-          <label>rotateY: {{ rotateY }} deg; </label>
-          <input type="range" min="-180" max="180" v-model="rotateY"/>
+          <label>rotateY: {{ rotateY }} deg;
+          <input type="range" min="-180" max="180" v-model="rotateY"/> </label>
 
-          <label>rotateZ:{{ rotateZ }} deg; </label>
-          <input type="range" min="-180" max="180" v-model="rotateZ"/>
+          <label>rotateZ:{{ rotateZ }} deg;
+          <input type="range" min="-180" max="180" v-model="rotateZ" /> </label>
 
           <button type="button" @click="reset">Reset</button>
           <button type="button">Copy</button>
@@ -30,7 +30,8 @@
       </section>
       <section class="output">
         <div class="box-container">
-          <div class="box"></div>
+          <div class="box" :style="rotation" >
+          </div>
         </div>
       </section>
     </main>

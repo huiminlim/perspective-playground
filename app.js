@@ -7,6 +7,18 @@ Vue.createApp({
             rotateZ: 0
         }
     },
+    computed: {
+        rotation() {
+            return {
+                transform: `
+                    perspective(${this.perspective}px)
+                    rotateX(${this.rotateX}deg)
+                    rotateY(${this.rotateY}deg)
+                    rotateZ(${this.rotateZ}deg)
+                `
+            }
+        }
+    },
     methods: {
         reset() {
             this.perspective = 500
